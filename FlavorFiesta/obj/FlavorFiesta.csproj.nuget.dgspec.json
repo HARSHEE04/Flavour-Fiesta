@@ -1,42 +1,42 @@
 {
   "format": 1,
   "restore": {
-    "/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/FlavorFiesta.csproj": {}
+    "/Users/Yammy/RiderProjects/Flavour-Fiesta/FlavorFiesta/FlavorFiesta.csproj": {}
   },
   "projects": {
-    "/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/FlavorFiesta.csproj": {
+    "/Users/Yammy/RiderProjects/Flavour-Fiesta/FlavorFiesta/FlavorFiesta.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/FlavorFiesta.csproj",
+        "projectUniqueName": "/Users/Yammy/RiderProjects/Flavour-Fiesta/FlavorFiesta/FlavorFiesta.csproj",
         "projectName": "FlavorFiesta",
-        "projectPath": "/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/FlavorFiesta.csproj",
+        "projectPath": "/Users/Yammy/RiderProjects/Flavour-Fiesta/FlavorFiesta/FlavorFiesta.csproj",
         "packagesPath": "/Users/Yammy/.nuget/packages/",
-        "outputPath": "/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/obj/",
+        "outputPath": "/Users/Yammy/RiderProjects/Flavour-Fiesta/FlavorFiesta/obj/",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "configFilePaths": [
           "/Users/Yammy/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net7.0-android",
-          "net7.0-ios",
-          "net7.0-maccatalyst"
+          "net8.0-android",
+          "net8.0-ios",
+          "net8.0-maccatalyst"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "/Users/Yammy/.dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0-android33.0": {
-            "targetAlias": "net7.0-android",
+          "net8.0-android34.0": {
+            "targetAlias": "net8.0-android",
             "projectReferences": {}
           },
-          "net7.0-ios16.1": {
-            "targetAlias": "net7.0-ios",
+          "net8.0-ios18.0": {
+            "targetAlias": "net8.0-ios",
             "projectReferences": {}
           },
-          "net7.0-maccatalyst16.1": {
-            "targetAlias": "net7.0-maccatalyst",
+          "net8.0-maccatalyst18.0": {
+            "targetAlias": "net8.0-maccatalyst",
             "projectReferences": {}
           }
         },
@@ -44,89 +44,33 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
-        "net7.0-android33.0": {
-          "targetAlias": "net7.0-android",
+        "net8.0-android34.0": {
+          "targetAlias": "net8.0-android",
           "dependencies": {
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.Extensions.DependencyInjection": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.Extensions.Logging": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
-            "Microsoft.Maui.Graphics": {
+            "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[7.0.101, )",
-              "autoReferenced": true
+              "version": "[8.0.100, )"
             },
-            "Xamarin.Android.Glide": {
+            "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[4.13.2.2, )",
-              "autoReferenced": true
+              "version": "[8.0.100, )"
             },
-            "Xamarin.AndroidX.Browser": {
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[1.4.0.3, )",
-              "autoReferenced": true
-            },
-            "Xamarin.AndroidX.Legacy.Support.V4": {
-              "target": "Package",
-              "version": "[1.0.0.15, )",
-              "autoReferenced": true
-            },
-            "Xamarin.AndroidX.Lifecycle.LiveData": {
-              "target": "Package",
-              "version": "[2.5.1.1, )",
-              "autoReferenced": true
-            },
-            "Xamarin.AndroidX.Navigation.Common": {
-              "target": "Package",
-              "version": "[2.5.2.1, )",
-              "autoReferenced": true
-            },
-            "Xamarin.AndroidX.Navigation.Fragment": {
-              "target": "Package",
-              "version": "[2.5.2.1, )",
-              "autoReferenced": true
-            },
-            "Xamarin.AndroidX.Navigation.Runtime": {
-              "target": "Package",
-              "version": "[2.5.2.1, )",
-              "autoReferenced": true
-            },
-            "Xamarin.AndroidX.Navigation.UI": {
-              "target": "Package",
-              "version": "[2.5.2.1, )",
-              "autoReferenced": true
-            },
-            "Xamarin.AndroidX.Security.SecurityCrypto": {
-              "target": "Package",
-              "version": "[1.1.0-alpha03, )",
-              "autoReferenced": true
-            },
-            "Xamarin.Google.Android.Material": {
-              "target": "Package",
-              "version": "[1.7.0, )",
-              "autoReferenced": true
-            },
-            "Xamarin.Google.Crypto.Tink.Android": {
-              "target": "Package",
-              "version": "[1.7.0.1, )",
+              "version": "[8.0.20, )",
               "autoReferenced": true
             }
           },
@@ -145,46 +89,31 @@
             "Microsoft.Android": {
               "privateAssets": "all"
             },
-            "Microsoft.Maui.Controls": {
-              "privateAssets": "all"
-            },
-            "Microsoft.Maui.Core": {
-              "privateAssets": "all"
-            },
-            "Microsoft.Maui.Essentials": {
-              "privateAssets": "all"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/Yammy/.dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
         },
-        "net7.0-ios16.1": {
-          "targetAlias": "net7.0-ios",
+        "net8.0-ios18.0": {
+          "targetAlias": "net8.0-ios",
           "dependencies": {
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.Extensions.DependencyInjection": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.Extensions.Logging": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
-            "Microsoft.Maui.Graphics": {
+            "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[7.0.101, )",
+              "version": "[8.0.100, )"
+            },
+            "Microsoft.Maui.Controls.Compatibility": {
+              "target": "Package",
+              "version": "[8.0.100, )"
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.20, )",
               "autoReferenced": true
             }
           },
@@ -203,46 +132,31 @@
             "Microsoft.iOS": {
               "privateAssets": "all"
             },
-            "Microsoft.Maui.Controls": {
-              "privateAssets": "all"
-            },
-            "Microsoft.Maui.Core": {
-              "privateAssets": "all"
-            },
-            "Microsoft.Maui.Essentials": {
-              "privateAssets": "all"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/Yammy/.dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
         },
-        "net7.0-maccatalyst16.1": {
-          "targetAlias": "net7.0-maccatalyst",
+        "net8.0-maccatalyst18.0": {
+          "targetAlias": "net8.0-maccatalyst",
           "dependencies": {
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.Extensions.DependencyInjection": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.Extensions.Logging": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
-            "Microsoft.Maui.Graphics": {
+            "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[7.0.101, )",
+              "version": "[8.0.100, )"
+            },
+            "Microsoft.Maui.Controls.Compatibility": {
+              "target": "Package",
+              "version": "[8.0.100, )"
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.20, )",
               "autoReferenced": true
             }
           },
@@ -262,20 +176,11 @@
             "Microsoft.MacCatalyst": {
               "privateAssets": "all"
             },
-            "Microsoft.Maui.Controls": {
-              "privateAssets": "all"
-            },
-            "Microsoft.Maui.Core": {
-              "privateAssets": "all"
-            },
-            "Microsoft.Maui.Essentials": {
-              "privateAssets": "all"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/Yammy/.dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -291,10 +196,10 @@
         "android-x86": {
           "#import": []
         },
-        "iossimulator-x64": {
+        "iossimulator-arm64": {
           "#import": []
         },
-        "maccatalyst-x64": {
+        "maccatalyst-arm64": {
           "#import": []
         }
       }

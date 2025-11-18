@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Shell
+    Shell.FlyoutBehavior="Disabled"
     x:Class="FlavorFiesta.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:FlavorFiesta"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:pages="clr-namespace:FlavorFiesta.Pages"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:Pages.WelcomePage}"
-        Route="MainPage" />
+        ContentTemplate="{DataTemplate pages:WelcomePage}"
+        Route="MainPage"
+        Title="Home" />
 
 </Shell>
-
