@@ -2,7 +2,7 @@
 
 A personalized recipe recommendation app built with .NET MAUI.
 
-Click below to watch the demo:
+Click to watch the demo!:
 [![Watch the video](https://img.youtube.com/vi/E7nPIt362HQ/0.jpg)](https://www.youtube.com/watch?v=E7nPIt362HQ)
 
 ---
