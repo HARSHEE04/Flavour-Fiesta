@@ -1,10 +1,5 @@
 Hello, test
 
-<object width="425" height="350">
-  <param name="movie" value="https://www.youtube.com/watch?v=E7nPIt362HQ" />
-  <param name="wmode" value="transparent" />
-  <embed src="http://www.youtube.com/user/wwwLoveWatercom?v=BTRN1YETpyg"
-         type="application/x-shockwave-flash"
-         wmode="transparent" width="425" height="350" />
-</object>
+[![Watch the video](https://img.youtube.com/vi/E7nPIt362HQ/0.jpg)](https://www.youtube.com/watch?v=E7nPIt362HQ)
+
 
