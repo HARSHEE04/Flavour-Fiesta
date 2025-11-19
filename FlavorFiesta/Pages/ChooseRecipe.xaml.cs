@@ -12,24 +12,29 @@ public partial class ChooseRecipe : ContentPage
     private Recipe allMatchingRecipes;
     public ChooseRecipe(BusinessLogic.Preferences prefs)
     {
-        
         InitializeComponent();
-        Debug.WriteLine($"Using preferences to search recipes: DietType={prefs.DietType}"); //explained in report - Maryam
+
+        Debug.WriteLine($"Received preferences: DietType={prefs.DietType}, CuisineType={prefs.CuisineType}, RecipeType={prefs.MealType}");
 
         _recipeManager = new RecipeManager();
         _csvRecipes = new RecipeManagerDataPersistance();
-        BindingContext = allMatchingRecipes;
-
-        Debug.WriteLine($"Received preferences: DietType={prefs.DietType}, CuisineType={prefs.CuisineType}, RecipeType={prefs.MealType}");
 
         try
         {
             allMatchingRecipes = _recipeManager.SearchRecipe(prefs, _csvRecipes);
+
+            if (allMatchingRecipes == null)
+            {
+                DisplayAlert("No Results", "No recipes matched your preferences.", "OK");
+                return;
+            }
+
+            // Now it's safe to assign BindingContext
+            BindingContext = allMatchingRecipes;
+
             Recipe1Name.Text = allMatchingRecipes.Name;
             RecipeImage.Source = allMatchingRecipes.RecipeImage;
-            Recipe1PrepTme.Text = $"The Prep time for this is: {allMatchingRecipes.RecipePreferences.PrepTimeRange.ToString()} minutes";
-
-           
+            Recipe1PrepTme.Text = $"The Prep time for this is: {allMatchingRecipes.RecipePreferences.PrepTimeRange} minutes";
         }
         catch (Exception ex)
         {
@@ -37,6 +42,7 @@ public partial class ChooseRecipe : ContentPage
             DisplayAlert("Error", "Failed to retrieve recipes.", "OK");
         }
     }
+
 
     private void OnMoreInfo(object sender, EventArgs e)
     {

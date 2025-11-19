@@ -1,59 +1,59 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using FlavorFiesta.BusinessLogic;
 
 namespace FlavorFiesta.DataPersistance
 {
-    //THIS FILE WAS MADE AND EDITED BY HARSHETA SHARMA
+    // THIS FILE WAS MADE AND EDITED BY HARSHETA SHARMA
     internal class RecipeManagerDataPersistance
     {
-        private  string _filePath;
+        private string _filePath;
 
-        ///read recipes from csv file and make it into a list
-        public List<Recipe> ReadRecipesFromCSV() //could have put this into a method
+        public List<Recipe> ReadRecipesFromCSV()
         {
-            _filePath = "/Users/Yammy/Desktop/PROG/Updated_TermProject/recipes.txt";  //PLEASE USE YOUR FILE PATH FOR THE ATTACHED TEXT FILE
+            _filePath = "C:/Users/Harsh/Downloads/recipes.txt";
+
             List<Recipe> list = new List<Recipe>();
 
             try
             {
-                string[] recipeObjects = File.ReadAllLines(_filePath);//used file path because that is the location, each line will have a recipe object
+                string[] lines = File.ReadAllLines(_filePath);
 
-                foreach (string line in recipeObjects)
+                foreach (string line in lines)
                 {
+                    if (string.IsNullOrWhiteSpace(line))
+                        continue;
+
                     string[] parts = line.Split(',');
 
-                    //extracting needed information from the recipe 
+                    // Skip invalid rows
+                    if (parts.Length < 11)
+                        continue;
+
+                    // Trim everything
+                    for (int i = 0; i < parts.Length; i++)
+                        parts[i] = parts[i].Trim();
+
                     string name = parts[0];
                     string recipeImage = parts[1];
                     string recipeURL = parts[2];
 
+                    // Create preferences (correct order!)
+                    BusinessLogic.Preferences prefs = new BusinessLogic.Preferences(
+                      parts[3],  // Diet
+                      parts[4],  // Cuisine
+                      parts[5],  // Meal
+                      parts[6],  // Calories
+                      parts[7],  // Prep time
+                      parts[8],  // Cook time
+                      parts[9],  // Servings
+                      parts[10]  // Total time
+                  );
 
-                    //now create the preferences object for this specific recipe 
-                    BusinessLogic.Preferences preferences = new BusinessLogic.Preferences(
-
-                        //the info and its corresponding property which will be used in Recipe class object made below
-                        parts[3], // dietType, vegan etc
-                        parts[4], // cuisineType
-                        parts[5], // mealType, lunch etc
-                        parts[6], // caloriesRange
-                        parts[7], // proteinRange
-                        parts[8], // sugarRange
-                        parts[9], // servingsRange
-                        parts[10] // prepTimeRange
-                       
-                    );
-
-                    //new recipe object made
-                    Recipe recipe = new Recipe(name, recipeImage, recipeURL, preferences);
-                    //added this recipe to the list of recipes
+                    Recipe recipe = new Recipe(name, recipeImage, recipeURL, prefs);
                     list.Add(recipe);
                 }
-
             }
             catch (Exception ex)
             {
@@ -62,6 +62,5 @@ namespace FlavorFiesta.DataPersistance
 
             return list;
         }
-
     }
 }
